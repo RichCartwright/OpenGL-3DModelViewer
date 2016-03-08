@@ -73,26 +73,26 @@ Vector4D Matrix4x4::operator* (const Vector4D& rhs) const
 
 void Matrix4x4::SetRotationXAxis(float degrees)
 {
-	m_element[0][0] = 1,	 m_element[0][1] = 0,								 m_element[0][2] = 0,								m_element[0][3] = 0;
+	m_element[0][0] = 1,	 m_element[0][1] = 0,					 m_element[0][2] = 0,								m_element[0][3] = 0;
 	m_element[1][0] = 0,	 m_element[1][1] = cos(degrees / (180 * M_PI)),		 m_element[1][2] = sin(degrees / (180 * M_PI)),		m_element[1][3] = 0;
 	m_element[2][0] = 0,	 m_element[2][1] = -sin(degrees / (180 * M_PI)),	 m_element[2][2] = cos(degrees / (180 * M_PI)),		m_element[2][3] = 0;
-	m_element[3][0] = 0,     m_element[3][1] = 0,								 m_element[3][2] = 0,								m_element[3][3] = 1;
+	m_element[3][0] = 0,     m_element[3][1] = 0,					 m_element[3][2] = 0,								m_element[3][3] = 1;
 }
 
 void Matrix4x4::SetRotationYAxis(float degrees)
 {
 	m_element[0][0] = cos(degrees / (180 * M_PI)),			 m_element[0][1] = 0,  m_element[0][2] = -sin(degrees / (180 * M_PI)),		m_element[0][3] = 0;
-	m_element[1][0] = 0,									 m_element[1][1] = 1,  m_element[1][2] = 0,									m_element[1][3] = 0;
+	m_element[1][0] = 0,						 m_element[1][1] = 1,  m_element[1][2] = 0,									m_element[1][3] = 0;
 	m_element[2][0] = sin(degrees / (180 * M_PI)),			 m_element[2][1] = 0,  m_element[2][2] = cos(degrees / (180 * M_PI)),		m_element[2][3] = 0;
-	m_element[3][0] = 0,									 m_element[3][1] = 0,  m_element[3][2] = 0,									m_element[3][3] = 1;
+	m_element[3][0] = 0,						 m_element[3][1] = 0,  m_element[3][2] = 0,									m_element[3][3] = 1;
 }
 
 void Matrix4x4::SetRotationZAxis(float degrees)
 {
 	m_element[0][0] = cos(degrees / (180 * M_PI)),			m_element[0][1] = -sin(degrees / (180 * M_PI)),			m_element[0][2] = 0,	m_element[0][3] = 0;
 	m_element[1][0] = sin(degrees / (180 * M_PI)),			m_element[1][1] = cos(degrees / (180 * M_PI)),			m_element[1][2] = 0,	m_element[1][3] = 0;
-	m_element[2][0] = 0,									m_element[2][1] = 0,									m_element[2][2] = 1,	m_element[2][3] = 0;
-	m_element[3][0] = 0,									m_element[3][1] = 0,									m_element[3][2] = 0,	m_element[3][3] = 1;
+	m_element[2][0] = 0,						m_element[2][1] = 0,									m_element[2][2] = 1,	m_element[2][3] = 0;
+	m_element[3][0] = 0,						m_element[3][1] = 0,									m_element[3][2] = 0,	m_element[3][3] = 1;
 }
 
 void Matrix4x4::SetTranslate(const Vector4D& tvec)
